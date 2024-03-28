@@ -1,11 +1,12 @@
 const express = require('express');
 const { ApolloServer, gql } = require('apollo-server-express');
-const path = require('path'); 
+const path = require('path');
 
 // Define el esquema de GraphQL
 const typeDefs = gql`
   type Query {
     hello(message: String!): String
+    aboutSebastian: String
   }
 `;
 
@@ -15,6 +16,9 @@ const resolvers = {
     hello: (_, { message }) => {
         return `¡Hola, ${message}! Un saludo por parte del profe `;
       },
+    aboutSebastian: () => {
+      return "Me encanta leer el periodico 🗞️"
+    }
   },
 };
 
@@ -46,4 +50,3 @@ async function startApolloServer() {
 }
 
 startApolloServer();
-
