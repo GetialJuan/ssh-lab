@@ -8,6 +8,7 @@ const typeDefs = gql`
     hello(message: String!): String
     aboutSebastian: String
   }
+  aboutBrandon:String
 `;
 
 // Define los resolvers de GraphQL
@@ -18,7 +19,10 @@ const resolvers = {
       },
     aboutSebastian: () => {
       return "Me encanta leer el periodico 🗞️"
-    }
+    },
+    aboutBrandon: () => {
+        return "I use Arch btw"
+      }
   },
 };
 
