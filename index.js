@@ -7,19 +7,27 @@ const typeDefs = gql`
   type Query {
     hello(message: String!): String
     aboutCarlos: String
+    aboutSebastian: String
   }
+  aboutBrandon:String
 `;
 
 // Define los resolvers de GraphQL
 const resolvers = {
-	Query: {
-		hello: (_, { message }) => {
-			return `¡Hola, ${message}! Un saludo por parte del profe `;
-		},
-		aboutCarlos: () => {
+  Query: {
+    hello: (_, { message }) => {
+        return `¡Hola, ${message}! Un saludo por parte del profe `;
+      },
+    aboutSebastian: () => {
+      return "Me encanta leer el periodico 🗞️"
+    },
+    aboutBrandon: () => {
+        return "I use Arch btw"
+      },
+    aboutCarlos: () => {
 			return `Carlos tiene una hermana y un hermano.`
-		},
-	},
+		}
+  },
 };
 
 async function startApolloServer() {
@@ -50,4 +58,3 @@ async function startApolloServer() {
 }
 
 startApolloServer();
-
