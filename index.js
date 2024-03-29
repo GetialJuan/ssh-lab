@@ -1,12 +1,13 @@
 const express = require('express');
 const { ApolloServer, gql } = require('apollo-server-express');
-const path = require('path'); 
+const path = require('path');
 
 // Define el esquema de GraphQL
 const typeDefs = gql`
   type Query {
     hello(message: String!): String
   }
+  aboutBrandon:String
 `;
 
 // Define los resolvers de GraphQL
@@ -15,6 +16,9 @@ const resolvers = {
     hello: (_, { message }) => {
         return `¡Hola, ${message}! Un saludo por parte del profe `;
       },
+    aboutBrandon: () => {
+        return "I use Arch btw"
+      }
   },
 };
 
