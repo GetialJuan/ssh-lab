@@ -6,6 +6,7 @@ const path = require('path');
 const typeDefs = gql`
   type Query {
     hello(message: String!): String
+    aboutSebastian: String
   }
   aboutBrandon:String
 `;
@@ -16,6 +17,9 @@ const resolvers = {
     hello: (_, { message }) => {
         return `¡Hola, ${message}! Un saludo por parte del profe `;
       },
+    aboutSebastian: () => {
+      return "Me encanta leer el periodico 🗞️"
+    },
     aboutBrandon: () => {
         return "I use Arch btw"
       }
@@ -50,4 +54,3 @@ async function startApolloServer() {
 }
 
 startApolloServer();
-
