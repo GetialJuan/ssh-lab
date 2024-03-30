@@ -8,8 +8,9 @@ const typeDefs = gql`
     hello(message: String!): String
     aboutCarlos: String
     aboutSebastian: String
+	aboutBrandon: String
+	aboutMauricio: String
   }
-  aboutBrandon:String
 `;
 
 // Define los resolvers de GraphQL
