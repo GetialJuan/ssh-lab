@@ -23,10 +23,13 @@ const resolvers = {
     },
     aboutBrandon: () => {
         return "I use Arch btw"
-      },
+    },
     aboutCarlos: () => {
 			return `Carlos tiene una hermana y un hermano.`
-		}
+	},
+	aboutMauricio: () => {
+		return "Me gusta la analitica de datos"
+	}
   },
 };
 
