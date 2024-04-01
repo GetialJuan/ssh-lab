@@ -10,6 +10,7 @@ const typeDefs = gql`
     aboutSebastian: String
 	aboutBrandon: String
 	aboutMauricio: String
+	aboutBrayan: String
   }
 `;
 
@@ -30,6 +31,9 @@ const resolvers = {
 	},
 	aboutMauricio: () => {
 		return "Me gusta la analitica de datos"
+	},
+	aboutBrayan: () => {
+		return "Me gustan los videojuegos y los juegos de ocio."
 	}
   },
 };
