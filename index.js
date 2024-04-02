@@ -8,9 +8,10 @@ const typeDefs = gql`
     hello(message: String!): String
     aboutCarlos: String
     aboutSebastian: String
-	aboutBrandon: String
-	aboutMauricio: String
-	aboutBrayan: String
+    aboutBrandon: String
+    aboutMauricio: String
+    aboutBrayan: String
+    aboutGetial: String
   }
 `;
 
@@ -28,13 +29,16 @@ const resolvers = {
     },
     aboutCarlos: () => {
 			return `Carlos tiene una hermana y un hermano.`
-	},
-	aboutMauricio: () => {
-		return "Me gusta la analitica de datos"
-	},
-	aboutBrayan: () => {
-		return "Me gustan los videojuegos y los juegos de ocio."
-	}
+    },
+    aboutMauricio: () => {
+      return "Me gusta la analitica de datos"
+    },
+    aboutBrayan: () => {
+      return "Me gustan los videojuegos y los juegos de ocio."
+    },
+    aboutGetial: () => {
+      return "Me llamo Juan Sebastian Getial, me gusta hacer ejercicio y la Pizza";
+    }
   },
 };
 
