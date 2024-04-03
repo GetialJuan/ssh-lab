@@ -12,6 +12,7 @@ const typeDefs = gql`
     aboutMauricio: String
     aboutBrayan: String
     aboutGetial: String
+    aboutJose: String
   }
 `;
 
@@ -38,7 +39,10 @@ const resolvers = {
     },
     aboutGetial: () => {
       return "Me llamo Juan Sebastian Getial, me gusta hacer ejercicio y la Pizza";
-    }
+    },
+    aboutJose: () => {
+      return "Me gusta el rap y el anime";
+    },
   },
 };
 
